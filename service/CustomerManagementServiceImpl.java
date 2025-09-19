@@ -71,4 +71,12 @@ public class CustomerManagementServiceImpl implements ICustomerManagementService
 		 
 		return flag;
 	 }
+
+	 @Override
+	 public long getCustomerCount() {
+		//use repo
+		 long count = custRepo.count();
+		 
+		return count;
+	 }
 }

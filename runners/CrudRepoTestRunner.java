@@ -42,8 +42,14 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 			 * Map.of(-) are from java 9 String resultMsg =
 			 * custService.regersterCustomerGroup(list); System.out.println(resultMsg);
 			 */
-			boolean flag = custService.isCustomerAvailable(52);
-			System.out.println(flag);
+			
+			/*
+			 * boolean flag = custService.isCustomerAvailable(52); System.out.println(flag);
+			 */
+			
+			long count = custService.getCustomerCount();
+			System.out.println(count);
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
