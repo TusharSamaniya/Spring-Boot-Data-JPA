@@ -79,4 +79,11 @@ public class CustomerManagementServiceImpl implements ICustomerManagementService
 		 
 		return count;
 	 }
+
+	 @Override
+	 public Iterable<Customer> getAllCustomer() {
+		// use repo
+		 Iterable<Customer> it = custRepo.findAll();
+		return it;
+	 }
 }

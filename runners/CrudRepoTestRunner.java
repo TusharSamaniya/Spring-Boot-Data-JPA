@@ -47,8 +47,14 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 			 * boolean flag = custService.isCustomerAvailable(52); System.out.println(flag);
 			 */
 			
-			long count = custService.getCustomerCount();
-			System.out.println(count);
+			/*
+			 * long count = custService.getCustomerCount(); System.out.println(count);
+			 */
+			
+			Iterable<Customer> it = custService.getAllCustomer();
+			it.forEach(cust -> {
+				System.out.println(cust);
+			});
 			
 		}catch(Exception e) {
 			e.printStackTrace();

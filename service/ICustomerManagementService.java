@@ -9,5 +9,6 @@ public interface ICustomerManagementService {
 	public String regersterCustomerGroup(Iterable<Customer> list);
 	public boolean isCustomerAvailable(Integer id);
 	public long getCustomerCount();
+	public Iterable<Customer> getAllCustomer();
 
 }
